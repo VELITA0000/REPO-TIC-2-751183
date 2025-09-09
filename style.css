@@ -1,0 +1,28 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2 {
+    width: 50%;  /* los elementos de linea ignoran el width */
+    float: left;  /* para que se comporte como elemento de bloque */
+}
+
+h2 {
+    clear: both;
+    /* clear fix fills the empty space created in the bottom of the elements of different heights*/
+}
+
+span {
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+/* ul > li::after { } */
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both; /* clear fix fills the empty space created in the bottom of the elements of different heights*/
+}
